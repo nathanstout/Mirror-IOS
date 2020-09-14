@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1001,
+    "imageName": "IMG_0923",
+    "category": "Shirts",
+    "subcategory": "Casual",
+    "color": "Gray"
+  },
+  {
+    "id": 1002,
+    "imageName": "IMG_0924",
+    "category": "Shirts",
+    "subcategory": "Casual",
+    "color": "Black"
+  },
+  {
+    "id": 1003,
+    "imageName": "IMG_0925",
+    "category": "Shirts",
+    "subcategory": "Dress",
+    "color": "Pink"
+  },
+  {
+    "id": 1011,
+    "imageName": "IMG_0926",
+    "category": "Hats",
+    "subcategory": "Active",
+    "color": "White"
+  },
+  {
+    "id": 1012,
+    "imageName": "IMG_0927",
+    "category": "Hats",
+    "subcategory": "Casual",
+    "color": "Black"
+  },
+  {
+    "id": 1013,
+    "imageName": "IMG_0928",
+    "category": "Hats",
+    "subcategory": "Casual",
+    "color": "Yellow"
+  },
+  {
+    "id": 1014,
+    "imageName": "IMG_0929",
+    "category": "Hats",
+    "subcategory": "Active",
+    "color": "Pink"
+  }
+]
