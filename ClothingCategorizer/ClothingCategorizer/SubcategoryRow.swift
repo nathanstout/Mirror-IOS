@@ -18,13 +18,14 @@ struct SubcategoryRow: View {
                 Text(self.subcategoryName)
                     .font(.system(size: 24))
                     .bold()
-                NavigationLink(destination: EmptyView()) {
+                Spacer()
+                NavigationLink(destination: ViewAll(categoryName: subcategoryName, items: items)) {
                     Spacer()
                     Text("See All")
                     .font(.body)
                     .foregroundColor(.blue)
                     .baselineOffset(2)
-                }.buttonStyle(PlainButtonStyle())
+                }
             }
             .padding(.leading, 15)
             .padding(.trailing, 15)

@@ -12,7 +12,45 @@ struct ArticleDetail: View {
     var article: Article
     
     var body: some View {
-        Text("This is a place holder")
+      VStack () {
+          article.image
+           .renderingMode(.original)
+           .resizable()
+           .scaledToFit()
+           .cornerRadius(5)
+            .padding(.top, 10)
+           
+          List {
+              Section(header: Text(" Identifiers")) {
+                  // Should be picker?
+                  HStack {
+                      Text("Category")
+                      Spacer()
+                    Text(article.category.rawValue)
+                          .foregroundColor(.secondary)
+                  }
+                  
+                  // Should be picker?
+                  HStack {
+                      Text("Subcategory")
+                      Spacer()
+                      Text(article.subcategory.rawValue)
+                          .foregroundColor(.secondary)
+                  }
+              }
+              Section(header: Text("Additional Identifiers")) {
+                  // Should be picker?
+                   HStack {
+                       Text("Color")
+                       Spacer()
+                       Text(article.color.rawValue)
+                          .foregroundColor(.secondary)
+                   }
+              }
+          }
+          .listStyle(GroupedListStyle())
+          .navigationBarTitle(Text(""), displayMode: .inline)
+      }
     }
 }
 

@@ -13,39 +13,21 @@ struct ViewAll: View {
     var items: [Article]
     
     var body: some View {
-        //ScrollView(.vertical, showsIndicators: false) {
-            List {
-                ImageRow(items: items)
+            if #available(iOS 14.0, *) {
+              ImageRow(items: items)
+                .navigationBarTitle(Text("All \(categoryName)"))
+            } else {
+              // Fallback on earlier versions
             }
-            .navigationBarTitle(Text("All \(categoryName)"))
-        //}
-        
-        
-        /*ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 0) {
-                ForEach(self.items) { article in
-                    NavigationLink(
-                        destination: ArticleDetail(
-                            article: article
-                        )
-                    ) {
-                        CategoryItem(article: article)
-                    }
-                }
-
-            }
-        }
-        .frame(height: 185)*/
     }
 }
 
 struct ViewAll_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ViewAll(
-                categoryName: articleData[0].category.rawValue,
-                items: Array(articleData.prefix(3))
-            )
-        }
+        ViewAll(
+            categoryName: articleData[0].category.rawValue,
+            items: Array(articleData.prefix(3))
+        )
+  
     }
 }
