@@ -18,7 +18,8 @@ struct ArticleDetail: View {
            .resizable()
            .scaledToFit()
            .cornerRadius(5)
-            .padding(.top, 10)
+            .padding(.top, 15)
+            .padding(.bottom, 5)
            
           List {
               Section(header: Text(" Identifiers")) {
